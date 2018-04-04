@@ -1,8 +1,9 @@
-<a href="https://github.com/Lausbert/Exermote/tree/master/ExermoteGatheringData">< Exermote Gathering Data</a> | <a href="https://github.com/Lausbert/Exermote/tree/master/ExermoteInference">Exermote Inference ></a>
 
-# Exermote Preprocessing and Training
+# Fitness Application
 
-After collecting labeled data, a model needs to be trained!
+This application is inspired by Lausbert works.<a href="https://github.com/Lausbert/Exermote">.
+Thanks for his training data and blog.
+
 
 ## Preprocessing
 
@@ -44,16 +45,6 @@ model = Sequential([
 ## Training
 
 The whole training procedure took place in the google cloud, since I found <a href="http://liufuyang.github.io/2017/04/02/just-another-tensorflow-beginner-guide-4.html">this wonderful tutorial</a>. The machine learning framework in use was Keras with TensorFlow as backend. Many thanks to Google for 300$ of free credits. After training hundreds of models there are still plenty left:
-
-<p align="center">
-<img src="https://github.com/Lausbert/Exermote/blob/master/ExermotePreprocessingAndTraining/investigation/Bildschirmfoto%202017-08-05%20um%2013.06.51.png" width="400">
-</p>
-
-For training observation I used TensorBoard:
-
-<p align="center">
-<img src="https://github.com/Lausbert/Exermote/blob/master/ExermotePreprocessingAndTraining/investigation/Bildschirmfoto%202017-05-19%20um%2017.46.51.png" width="800">
-</p>
 
 The (optimum) parameters shown below where determined during training. ```timesteps``` defines the sliding window length, while ```timesteps_in_future``` specifies which time step label should be characteristic for a sliding window. More ```timesteps_in_future``` would mean a higher accuracy in recognition, while it would worsen live prediction experience.
 
